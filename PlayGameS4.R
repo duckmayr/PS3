@@ -18,6 +18,9 @@ setValidity('door',
               # Note that the number must be 1, 2, or 3 to be valid;
               # that is, even if the number is some other integer it won't work
               # I did it this way because the game has only three doors
+              if (length(object@number) > 1) {
+                return('Choose only one door number!')
+              }
               if (!(object@number %in% 1:3)) {
                 return('@number is not a valid door number')
               }
